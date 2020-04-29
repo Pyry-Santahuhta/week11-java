@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Week 11 java</string>
+    <string name="Open" />
+    <string name="Close" />
 </resources>
