@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     int fontSize = 14;
     int textWidth;
     int textHeight;
-    int lineCount = 7;
+    int lineCount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) displayText.getLayoutParams();
         textHeight = params.height;
         textWidth = params.width;
+        lineCount = displayText.getLineCount();
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.Open, R.string.Close);
         drawerLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
@@ -88,12 +89,18 @@ public class MainActivity extends AppCompatActivity {
                 textHeight = data.getIntExtra("Height", -1);
                 lineCount = data.getIntExtra("lineCount", -1);
                 displayTextString = data.getStringExtra("displayText");
-                displayText.setText(displayTextString);
+                System.out.println(displayTextString.length());
+                if (displayTextString.length()>1) {
+                    displayText.setText(displayTextString);
+                }
                 RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) displayText.getLayoutParams();
-                params.width = textHeight;
+                params.width = textWidth;
                 params.height = textHeight;
+                displayText.setLayoutParams(params);
                 displayText.setTextSize(fontSize);
-                displayText.setLines(lineCount);
+                if (lineCount>0) {
+                    displayText.setLines(lineCount);
+                }
             }
         }
     }

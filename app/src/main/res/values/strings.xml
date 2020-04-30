@@ -1,5 +1,14 @@
 <resources>
-    <string name="app_name">Week 11 java</string>
+    <string name="app_name">Java-11</string>
     <string name="Open" />
     <string name="Close" />
+    <string name="text_settings">Text settings</string>
+    <string name="text_box_width">Text box width</string>
+    <string name="text_box_height">Text box height</string>
+    <string name="line_count">Line count</string>
+    <string name="display_text">Display text</string>
+    <string name="fontsize">Fontsize</string>
+    <string name="language">Language</string>
+    <string name="settings">Settings</string>
+    <string name="settingsTitle">Settings</string>
 </resources>
