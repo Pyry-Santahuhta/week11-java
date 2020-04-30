@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Java-11</string>
+    <string name="Open" />
+    <string name="Close" />
+    <string name="text_settings">Text inställningar</string>
+    <string name="text_box_width">Textbruta bredd</string>
+    <string name="text_box_height">Textbruta höjd</string>
+    <string name="line_count">Antal linjer</string>
+    <string name="display_text">Visa texten</string>
+    <string name="fontsize">Textstorlek</string>
+    <string name="language">Språk</string>
+    <string name="settings">Inställningar</string>
+    <string name="settingsTitle">Inställningar</string>
+</resources>
