@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Java-11</string>
+    <string name="Open" />
+    <string name="Close" />
+    <string name="text_settings">Tekstiasetukset</string>
+    <string name="text_box_width">Tekstilaatikon leveys</string>
+    <string name="text_box_height">Tekstilaatikon korkeus</string>
+    <string name="line_count">Rivimäärä</string>
+    <string name="display_text">Päänäytön teksti</string>
+    <string name="fontsize">Fonttikoko</string>
+    <string name="language">Kieli</string>
+    <string name="settings">Asetukset</string>
+    <string name="settingsTitle">Asetukset</string>
+</resources>
