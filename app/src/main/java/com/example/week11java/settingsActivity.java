@@ -12,8 +12,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Switch;
-
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -53,12 +51,13 @@ public class settingsActivity extends AppCompatActivity {
 
         languageSpinner.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
+            public boolean onTouch(View v, MotionEvent event) { //This is to avoid automatic selection
                 spinnerTouched = true;
                 return false;
             }
         });
-        if (intent.getStringExtra("lang") != null) {
+
+        if (intent.getStringExtra("lang") != null) {    //Move the spinner into the right spot
             switch (intent.getStringExtra("lang")) {
                 case "fi":
                     languageSpinner.setSelection(1);
@@ -71,11 +70,12 @@ public class settingsActivity extends AppCompatActivity {
                     break;
             }
         }
+
         languageSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (spinnerTouched) {
-                    switch (languageSpinner.getSelectedItem().toString()) {
+                    switch (languageSpinner.getSelectedItem().toString()) { //Changing language by changing locale
                         case ("English"):
                             setLocale("gb");
                             break;
